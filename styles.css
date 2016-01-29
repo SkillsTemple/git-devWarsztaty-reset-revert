@@ -1,3 +1,6 @@
 .some-class {
 	margin: 0;
 }
+.some-class.some-other-class {
+	margin-right: 50px;
+}
