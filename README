@@ -1,0 +1,14 @@
+Ćwiczenie z warsztatów gita z okazji devWarsztatów, 30 stycznia 2016.
+
+Opis:
+Nasze eksperymentalne zmiany, których dokonaliśmy na branchu master
+niestety okazały się niedobre i musimy je skasować. Zostały one już
+wypchnięte na repozytorium publiczne, więc chcielibyśmy zrobić to
+w taki sposób, aby nikomu z zespołu nie przysporzyć kłopotu. Dodatkowo
+zmiany do CSS są rozstrzelone na kilka commitów i chcielibyśmy połączyć
+je w jeden. Te zmiany na szczęście są tylko na naszym komputerze, więc
+nie musimy obawiać się przesuwania branchy.
+
+Zadanie:
+Wycofać zmiany z commita 83bfe65 ("EXPERIMENTAL") z tagiem "already-pushed".
+Połączyć commity c42f4e2 c1ae555 6b0c679 61d2ada w jeden z lepszym opisem.

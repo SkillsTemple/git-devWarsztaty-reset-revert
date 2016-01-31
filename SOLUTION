@@ -1,0 +1,33 @@
+# Na poczatku połączmy commity związane z CSS w jedną całość.
+# Żeby to zrobić użyjemy komendy "reset", która cofnie wskaźnik
+# "master" do commita, który wskażemy. My wskazujemy na ostatni
+# commit, który został "wypchnięty" do repozytorium, oznaczony
+# tagiem "already-pushed". Wybieramy ten commit, bo on też jest
+# pierwszym, na którym jeszcze nie ma zmiany do CSS
+git reset already-pushed
+
+# W katalogu roboczym mamy teraz plik styles.css, w którym są
+# *wszystkie* zmiany do CSS, które były zrobione w 4 commitach:
+# c42f4e2 c1ae555 6b0c679 61d2ada
+# Możemy dodać ten plik do staging area i zrobić nowego commita
+git add styles.css
+git commit -m "Change styles"
+
+# (Poprzednie operacje można skrócić używając opcji reset --soft,
+# która automatycznie zostawia zmiany w staging area, wyglądałoby
+# to tak: git reset --soft already-pushed, git commit -m "Change styles")
+
+# Teraz musimy pozbyć się eksperymentalnych zmian z commita 83bfe65.
+# Niestety te zmiany zostały już upublicznione, więc nie powinniśmy
+# używać w tym przypadku reset. Użyjemy za to "revert", który stworzy
+# nowego commita odwracającego zmiany eksperymentalne
+git revert 83bfe65
+
+# zostanie otwarte okno do wyboru opisu zmiany, domyślnie jest to
+# Revert + nazwa oryginalnej zmiany
+# Gdy wyjdziemy z okna operacja zostanie zakończona i tym samym nasze zadanie.
+
+# Proste?
+# Powodzenia z dalszą nauką gita! To może być ciekawa zabawa! :)
+
+
